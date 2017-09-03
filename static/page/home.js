@@ -1,4 +1,5 @@
 var template = `<div class='home'>
+<button @click='login'>login</button>
 <input v-model='searchTitle' placeholder='search a title'>
 <select  v-model =  "palce" >
 	<option disabled selected value>select a place</option>
@@ -47,6 +48,8 @@ const Home = {
     toMe: function(){
         router.push('/me')
     },
-
+    login: function(){
+        router.push('/login')
+    },
   }
 }

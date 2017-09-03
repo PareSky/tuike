@@ -26,7 +26,11 @@ const Login = {
             })
         },
         login: function(){
-            router.push('/')
+            axios.get('/user/login')
+            .then(res=>{
+                if(res.data == 'success')
+                    router.push('/')
+            })
         }
     }
 }
