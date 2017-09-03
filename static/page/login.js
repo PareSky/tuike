@@ -19,7 +19,11 @@ const Login = {
 	},
     methods:{
         getAuthCode: function(){
-            this.authCode = '2333'
+            axios.get('/api')
+            .then(res=>{
+                console.log(res)
+                this.authCode = res.data
+            })
         },
         login: function(){
             router.push('/')

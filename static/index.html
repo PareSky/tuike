@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<title>推客</title>
+<link rel="stylesheet" type="text/css" href="css/common.css">
+
+<script src="./js/vue2.4.js"></script>
+<script src="./js/vue-router2.7.js"></script>
+<script src="./js/axios.js"></script>
+</head>
+<body>
+<div id='app'>
+
+ <router-view></router-view>
+</div>
+
+<script src='page/login.js'></script>
+<script src='page/home.js'></script>
+<script src='page/diy.js'></script>
+<script src='page/me.js'></script>
+<script src='page/rank.js'></script>
+<script src='page/launch.js'></script>
+<script src='router.js'></script>
+<script>
+new Vue({
+  el: '#app',
+  router, 
+  data:{
+    message: "hello"
+  }
+})
+
+
+window.onload = window.onresize = function(){
+	var deviceWidth = document.documentElement.clientWidth;
+	document.getElementsByTagName('html')[0].style.fontSize = deviceWidth/16+'px';
+}
+
+</script>
+
+</body>
+
+</html>

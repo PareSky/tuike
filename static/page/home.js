@@ -6,7 +6,7 @@ var template = `<div class='home'>
 	<option  value = "hangzhou" >hangzhou</option >
 </select >
 <section>
-	<div class='qCard'>
+	<div class='qCard' @click="toLaunch">
 		<img src='img/quest1.jpg'></img>
 		<div>title: girl1</div>
 	</div>
@@ -16,9 +16,10 @@ var template = `<div class='home'>
 	</div>
 </section>
 <nav>
-	<a href="index.asp">Home</a>
-	<a href="html5_meter.asp">Previous</a>
-	<a href="html5_noscript.asp">Next</a>
+	<a @click="toHome">Home</a>
+	<a @click="toDIY">DIY</a>
+	<a @click="toRank">Rank</a>
+	<a @click="toMe">Me</a>
 </nav>
 </div>`
 
@@ -31,11 +32,21 @@ const Home = {
 		}
 	},
   methods:{
-    getAuthCode: function(){
-        this.authCode = '2333'
+    toLaunch: function(){
+        router.push('/launch')
     },
-    login: function(){
+    toHome: function(){
         router.push('/')
-    }
+    },
+    toDIY: function(){
+        router.push('/diy')
+    },
+    toRank: function(){
+        router.push('/rank')
+    },
+    toMe: function(){
+        router.push('/me')
+    },
+
   }
 }
