@@ -6,11 +6,9 @@
 4、推客也可以“自助发布”，也就是说利用这个平台合成图片，该合成的图片被传播后，不需要统计业绩。<br>
 
 启动：
-cd Nodejs
-<br>
-node index.js
 `
-function(){
- console.log('hello')
-}
+cd Nodejs`
+<br>
+`
+node index.js
 `
