@@ -20,16 +20,23 @@ const Login = {
     methods:{
         getAuthCode: function(){
             axios.get('/api')
-            .then(res=>{
+            .then(res=>{ 
                 console.log(res)
                 this.authCode = res.data
             })
         },
         login: function(){
-            axios.get('/user/login')
+            let param = {
+                phone : this.phone,
+                authCode : this.authCode
+            }
+            axios.post('/user/signUp', param)
             .then(res=>{
-                if(res.data == 'success')
+                if(res.data.success){
                     router.push('/')
+                }else{
+                    alert(res.data.message)
+                }
             })
         }
     }

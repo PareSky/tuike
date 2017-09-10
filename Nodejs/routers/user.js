@@ -7,5 +7,6 @@
 
  const routers = router
  	.get('/login', userInfoController.login)
+ 	.post('/signUp',userInfoController.signUp)
 
  module.exports = routers
